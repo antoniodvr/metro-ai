@@ -96,13 +96,21 @@ def get_predictions(layer_outputs, threshold, img_width, img_height, labels):
                 # use the center (x, y)-coordinates to derive the top left corner of the bounding box
                 top_x = int(center_x - (width / 2))
                 top_y = int(center_y - (height / 2))
+                width = int(width)
+                height = int(height)
+
+                # points normalization
+                y_min = top_y / img_height
+                x_min = top_x / img_width
+                y_max = (top_y + height) / img_height
+                x_max = (top_x + width) / img_width
 
                 predictions.append(
                     {
                         'label_id': int(class_id),
                         'label': labels[class_id],
                         'confidence': float(confidence),
-                        'detection_box': [int(top_x), int(top_y), int(width), int(height)]
+                        'detection_box': [y_min, x_min, y_max, x_max]
                     }
                 )
 
@@ -136,7 +144,7 @@ def predict():
     return Response(response=json.dumps(response), status=200, mimetype="application/json")
 
 
-@app.errorhandler(NetworkNotConfigured)
+@app.errorhandler(HTTPException)
 def handle_exception(e):
     response = e.get_response()
     response.data = json.dumps({
