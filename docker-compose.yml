@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  metro-ai:
+    build: .
+    container_name: metro-ai
+    environment:
+      - NETWORK_FOLDER=./yolo
+    ports:
+      - "5000:5000"
+    volumes:
+      - ".:/app"
