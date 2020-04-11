@@ -39,8 +39,6 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
 * [Usage](#usage)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
@@ -58,24 +56,6 @@ DNS Expiration Checker is a simple tool to check the expiration for most of the 
 
 * [Python](https://www.python.org/) 
 * [pip](https://pip.pypa.io/en/stable/)
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-
-It works with Python 3.x.
-
-```sh
-$ sudo apt-get update
-$ sudo apt-get install python3
-```
 
 
 
