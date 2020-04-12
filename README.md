@@ -130,7 +130,6 @@ Response:
     ]
 }
 ```
-_For more examples, please refer to the [Documentation](https://github.com/antoniodvr/metro-ai)_
 
 
 
