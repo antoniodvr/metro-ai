@@ -18,7 +18,7 @@
   <h3 align="center">metro-ai</h3>
 
   <p align="center">
-    A simple Object Detection API with YOLO using a pre-trained model.
+    A simple Object Detection API with OpenCV and YOLO v3 using a pre-trained model.
     <a href="https://github.com/antoniodvr/metro-ai/blob/master/README.md">
     <br />
     <strong>Explore the docs »</strong></a>
@@ -50,7 +50,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-DNS Expiration Checker is a simple tool to check the expiration for most of the popular top-level domain (TLD).
+A simple Object Detection API with OpenCV and YOLO v3 using a pre-trained model.
 
 ### Built With
 
