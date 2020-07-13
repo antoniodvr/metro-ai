@@ -84,12 +84,14 @@ docker-compose up -d
 
 ### Make a prediction
 
-Request: 
+Use the `model/predict` endpoint to load a test image and get predicted labels.
+
 ```shell script
-curl.exe -X POST -F image=@human-dog.jpg http://localhost:5000/model/predict -v                    2028-09-14 04:00:00             3161
+curl -X POST -F image=@human-dog.jpg http://localhost:5000/model/predict -v
 ```
 
-Response:
+The coordinates of the bounding box are returned in the `detection_box` field as normalized coordinates (ranging from 0 to 1) in the form `[ymin, xmin, ymax, xmax]`.
+
 ```json
 {
     "network_execution_time": 2640,
@@ -131,6 +133,7 @@ Response:
 }
 ```
 
+The coordinates of the bounding box are returned in the detection_box field, and contain the array of normalized coordinates (ranging from 0 to 1) in the form [ymin, xmin, ymax, xmax].
 
 
 <!-- ROADMAP -->
